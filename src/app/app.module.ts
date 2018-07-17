@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 
 //plugins
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import {Leaflet} from '../../node_modules/leaflet'
 
 //Servicios
 import { HistorialService } from "../providers/historial/historial.service";
@@ -23,6 +25,7 @@ import { HistorialService } from "../providers/historial/historial.service";
   ],
   imports: [
     BrowserModule,
+    Leaflet,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -37,6 +40,7 @@ import { HistorialService } from "../providers/historial/historial.service";
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HistorialService,
   ]
