@@ -10,12 +10,13 @@
 <ion-content>
 
   <ion-list>
-    <button ion-item *ngFor="let item of historial; let i = index"
-    (click) = "open_scan(i);">
-      {{item.info}}
-
-    </button>
-
+      
+      <button ion-item *ngFor="let item of historial; let i = index"
+         (click) = "open_scan(i);">
+         {{item.info}}
+         <p>{{item.tipo}}</p>
+         
+      </button>
   </ion-list>
 
 </ion-content>
